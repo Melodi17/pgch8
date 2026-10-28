@@ -14,7 +14,7 @@ class Program
         Program.Reset();
 
         CreateScreen();
-        WriteRom("/Users/melodidey/Source/csharp/pgch8/test_opcode.ch8");
+        WriteRom("tetris.ch8");
         WriteFont([
             0xF0, 0x90, 0x90, 0x90, 0xF0, // 0
             0x20, 0x60, 0x20, 0x20, 0x70, // 1
@@ -184,7 +184,7 @@ class Screen
         StringBuilder sb = new();
         for (int i = 0; i < Pixels.Length; i++)
         {
-            sb.Append(Pixels[i] ? "#" : " ");
+            sb.Append(Pixels[i] ? "█" : " ");
             if ((i + 1) % Width == 0)
                 sb.AppendLine();
         }
